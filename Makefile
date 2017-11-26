@@ -13,6 +13,12 @@ tweaks:
 	# Quarantine downloaded objects
 	defaults write com.apple.LaunchServices LSQuarantine -bool NO
 
+	# Chrome: Disable left and right swiping gestures
+	defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
+	# Chrome: Disable pinch to zoom gesture
+	defaults write com.google.Chrome PinchToChangeFontSizeDisabled -bool TRUE
+
 ruby:
 	curl -sSL https://get.rvm.io | bash -s stable --ruby
 	gem install bundler
